@@ -8,7 +8,7 @@ export default function Header({show, setShow}) {
             if (ref.current.contains(event.target)) {
                 return;
             }
-            setShow(!show)
+            setShow(false)
         })
     })
 
