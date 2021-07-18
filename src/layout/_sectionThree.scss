@@ -1,0 +1,44 @@
+.sectionThree {
+  background: url("../img/Path 2238.png") no-repeat
+  right bottom ,
+  url("../img/Path 2239.png") no-repeat
+  left  ,
+  url("../img/background.png") no-repeat
+  center center / cover;
+
+  display: flex;
+  align-items: center;
+  color: white;
+  padding: 5rem 20rem;
+
+  @media only screen and (max-width: $largest-bp){
+    padding: 5rem 5rem;
+  }
+  @media only screen and  (max-width: $medium-bp){
+    padding: 2rem;
+  }
+  &__about {
+    width: 15rem;
+    border: 2px solid $color-secondary;
+    border-radius: 50%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    height: 12rem;
+    &:not(:last-child) {
+      margin-left: 2rem;
+    }
+  }
+  &__customers {
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}

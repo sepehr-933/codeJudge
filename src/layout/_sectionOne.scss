@@ -1,0 +1,52 @@
+.sectionOne {
+  padding: 5rem;
+
+  @media only screen and (max-width: $small-bp){
+    padding: 2rem;
+  }
+  &__bgs {
+ background:
+ url("../img/circle_orange.png") no-repeat
+ left top ,
+ url("../img/circle_pink.png") no-repeat
+ right bottom,
+ url("../img/background_gradient.png") no-repeat
+ center center/cover;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: row;
+    padding: 7rem 9rem;
+    align-items: center;
+    justify-content: space-between;
+
+    @media only screen and (max-width: $largest-bp){
+      flex-direction: column;
+    }
+
+    @media only screen and (max-width: $small-bp){
+      padding: 2rem 4rem;
+    }
+}
+&__paragraph {
+  font-size: 2rem;
+  line-height: 1.4;
+  color: white;
+}
+&__img {
+  height: 100%;
+
+  @media only screen and (max-width: $largest-bp){
+    order: 0;
+    width: 100%;
+  }
+}
+
+  &__content {
+
+    @media only screen and (max-width: $largest-bp){
+      order: 1;
+      text-align: center;
+    }
+  }
+
+}

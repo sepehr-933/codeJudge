@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import Header from "./layout/Header";
+import './App.scss'
+import SectionOne from "./layout/SectionOne";
+import SectionTwo from "./layout/SectionTwo";
+import SectionThree from "./layout/SectionThree";
+import SectionFour from "./layout/SectionFour";
+import SectionFive from "./layout/SectionFive";
+import SectionSix from "./layout/SectionSix";
+import Footer from "./layout/Footer";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+
+export default function App() {
+
+
+    const [show, setShow] = useState(false)
+
+    return (
+      <div className="App">
+          <Header show={show} setShow={setShow} />
+          <SectionOne />
+          <SectionTwo />
+          <h4 style={{margin:"0 auto 5rem auto"}} className="heading-4 "> چه کسانی<span> اینجا </span>  هستند؟</h4>
+          <SectionThree />
+          <SectionFour />
+          <SectionFive />
+          <SectionSix />
+          <Footer />
+      </div>
+  )
 }
-
-export default App;

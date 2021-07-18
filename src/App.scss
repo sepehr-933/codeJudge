@@ -1,0 +1,15 @@
+@import "./layout/variables";
+@import "./layout/utilities";
+@import "./layout/header";
+@import "./layout/buttons";
+@import "./layout/sectionOne";
+@import "./layout/sectionTwo";
+@import "./layout/sectionThree";
+@import "./layout/sectionFour";
+@import "./layout/sectionFive";
+@import "./layout/sectionSix";
+@import "./layout/footer";
+
+.App {
+  direction: rtl;
+}

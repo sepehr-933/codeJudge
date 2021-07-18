@@ -1,0 +1,75 @@
+.header {
+  padding: 2rem 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo {
+    height: 5rem;
+    margin-left: 1rem;
+
+    @media only screen and (max-width: $large-bp) {
+      order: 1;
+    }
+  }
+  &__button {
+    background-color:transparent;
+    border: none;
+    font-size: 1.8rem;
+    padding: .5rem;
+  }
+
+  &__navbar {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+
+    @media only screen and  (max-width: $large-bp){
+      flex-direction: column;
+      background-color: #F5F2FF;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+      position: fixed;
+      top: 7rem;
+      right: 5rem;
+      z-index: 10;
+      width: 60%;
+      padding: 4rem;
+      align-items: center;
+      display: none;
+    }
+
+  }
+
+  &__menu {
+    width: 5rem;
+    height: 3px;
+    background-color: $color-primary;
+    position: relative;
+    display: none;
+
+    @media only screen and (max-width: $large-bp){
+      display: block;
+    }
+
+    &::before {
+      content: "";
+      width: 5rem;
+      height: 3px;
+      background-color: $color-primary;
+      position: absolute;
+      top: -1rem;
+    }
+    &::after {
+      content: "";
+      width: 5rem;
+      height: 3px;
+      background-color: $color-primary;
+      position: absolute;
+      bottom: -1rem;
+    }
+  }
+}
+
+.show {
+  display: flex;
+}

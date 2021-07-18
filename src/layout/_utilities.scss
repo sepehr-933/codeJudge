@@ -1,0 +1,81 @@
+//margin bottoms
+.mr-bt-sm {margin-bottom: 2rem}
+.mr-bt-tn {margin-bottom: 3rem}
+.mr-bt-md {margin-bottom: 4rem}
+.mr-bt-bg {margin-bottom: 8rem}
+
+//margin left
+.mr-lf-sm {margin-left: 2rem}
+.mr-lf-tn {margin-left: 1rem}
+.mr-spacing {margin-left: auto}
+.mr-centering {margin: 0 auto 4rem auto}
+
+//font related
+.fontSetter {font-size: 1.7rem}
+
+
+//headings
+.heading-1 {
+  font-size: 5rem;
+}
+.heading-5 {
+  font-size: 2.3rem;
+}
+.heading-3 {
+  font-size: 4rem;
+  color: white;
+}
+.heading-4 {
+  font-size: 3rem;
+  padding: 0 1.7rem;
+  position: relative;
+  width: max-content;
+  display: block;
+  span {
+    color: $color-primary;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    height: .7rem;
+    width: .7rem;
+    background-color: $color-secondary;
+    border-radius: 1.5px;
+    box-shadow: 0 .2rem .4rem rgba($color-secondary,0.3);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    height: .7rem;
+    width: .7rem;
+    background-color: $color-secondary;
+    border-radius: 1.5px;
+    box-shadow: 0 .2rem .4rem rgba($color-secondary,0.3);
+  }
+}
+
+//media queries
+$largest-bp : 75em;
+$large-bp : 56.25em;
+$medium-bp : 48em ;
+$small-bp : 37.5em ;
+
+html {
+  font-size: 62.5%;
+
+  @media only screen and (max-width: $medium-bp){
+    font-size: 50%;
+  }
+  @media only screen and (max-width: $small-bp){
+    font-size: 42.5%;
+  }
+}
+
+
+

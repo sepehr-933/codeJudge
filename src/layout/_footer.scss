@@ -1,0 +1,157 @@
+.footer {
+  padding: 7rem 4rem 4rem 4rem ;
+  position: relative;
+  &__container {
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns:repeat(4 , 1fr) ;
+    grid-gap: 5rem 5rem;
+    position: relative;
+    padding: 8rem 5rem;
+
+    @media only screen and (max-width: $small-bp){
+      grid-gap: 2rem;
+    }
+
+    @media only screen and (max-width: $large-bp){
+      grid-template-columns:repeat(3 , 1fr) ;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      background: url("../img/circle_orange.png") no-repeat 120% -200% ,
+      url("../img/circle_purple.png") no-repeat 95% -150% ,
+      url("../img/circle_pink@2x.png") no-repeat 700% 30%  ,
+      url("../img/background.png") no-repeat center center / cover;
+      opacity: 0.7;
+      z-index: -5;
+      border-radius: 1rem;
+
+      @media only screen and (max-width: $medium-bp){
+        background: url("../img/circle_orange.png") no-repeat 170% -70% ,
+        url("../img/circle_purple.png") no-repeat 60% -60% ,
+        url("../img/circle_pink.png") no-repeat 230% 730%  ,
+        url("../img/background.png") no-repeat center center / cover;
+      }
+    }
+
+  }
+
+  &__items {
+    &-0 {
+      @media only screen and (max-width: $large-bp){
+        grid-column: span 2;
+        order: 0;
+      }
+    }
+    &-1 {
+      @media only screen and (max-width: $large-bp){
+        order: 2;
+      }
+    }
+    &-2 {
+      @media only screen and (max-width: $large-bp){
+        order: 3;
+      }
+    }
+    &-3 {
+      @media only screen and (max-width: $large-bp){
+        order: 4;
+      }
+    }
+    &-4 {
+      @media only screen and (max-width: $large-bp){
+        order: 6;
+        grid-column: span 3;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+  &__logos {
+    display: flex;
+    align-items: center;
+
+    @media only screen and (max-width: $large-bp){
+      order: 1;
+      flex-direction: column;
+      grid-row: span 2;
+    }
+  }
+  &__logo {
+    //height: 15rem;
+  }
+  &__items-span {
+    grid-column: span 2;
+
+    @media only screen and (max-width: $large-bp){
+      order: 5;
+    }
+  }
+  &__paragraph {
+    font-size: 1.7rem;
+    margin-bottom: 1rem;
+  }
+  & h5 {
+    margin-bottom: 1rem;
+  }
+  &__hr {
+    margin-bottom: 1rem;
+    background: rgba(#5A5A5A, 0.6);
+    height: 2px;
+    width: 80%;
+  }
+  &__copyright {
+    grid-column: span 4;
+    text-align: center;
+
+    @media only screen and (max-width: $large-bp){
+      grid-column: span 3;
+      order: 7;
+    }
+  }
+
+  &__email {
+   display: flex;
+   width: max-content;
+   flex-direction: column;
+   padding: 3rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translate(-50%, -10%);
+    z-index: 6;
+    background-color: white;
+    border-radius: 10px;
+  }
+  &__input {
+    padding: 1.7rem;
+    margin-left: -9rem;
+    z-index: 0;
+    position: relative;
+    width: 100%;
+    border: 1px solid $color-secondary;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.16);
+
+    &::-webkit-input-placeholder {
+      color: #B5B5B5;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  &__button {
+    padding: .7rem 2rem;
+    height: min-content;
+    position: relative;
+    z-index: 2;
+  }
+}

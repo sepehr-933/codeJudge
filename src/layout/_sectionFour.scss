@@ -1,0 +1,115 @@
+.sectionFour {
+  max-width: 1100px;
+  padding: 5rem;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $medium-bp){
+    padding: 1rem;
+  }
+
+  &__benefits {
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    grid-gap: 4rem;
+    margin-bottom: 3rem;
+
+    @media only screen and (max-width: 927px){
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    justify-items: center;
+    padding: 4rem;
+    transition: background-color .3s;
+
+    @media only screen and (max-width: $medium-bp){
+      padding: 1rem;
+    }
+
+    &-res {
+      @media only screen and (max-width: 927px) {
+
+        left: 50%;
+        transform: translateX(-50%);
+      }
+    }
+
+    &:hover {
+      background-color: rgba(#B79FFF , 0.5);
+    }
+  }
+  &__span {
+    border-radius: .5rem;
+    padding: 3rem;
+    width: 7rem;
+    height: 7rem;
+    color: white;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+    font-size: 2.4rem;
+    &-1 {
+      background-color: $color-secondary ;
+      box-shadow: 0 .2rem 1.6rem rgba($color-secondary, 0.7);
+      position: relative;
+    }
+    &-2 {
+      background-color: $color-primary;
+      box-shadow: 0 .2rem 1.6rem rgba($color-primary, 0.7);
+      position: relative;
+    }
+    &-3 {
+      background-color: $color-tertiary ;
+      box-shadow: 0 .2rem 1.6rem rgba($color-tertiary, 0.7);
+    }
+  }
+  &__paragraph {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  &__direction {
+    &-1 {
+      transform: translate(-6rem, 0);
+    }
+    &-2 {
+      transform: translate(-6rem, 4rem);
+
+      @media only screen and (max-width: 927px){
+        display: none;
+      }
+    }
+    &-res {
+      display: none;
+
+      @media only screen and (max-width: 927px){
+        display: block;
+        transform: rotate(200deg) translate(-90% , -250%);
+      }
+      @media only screen and (max-width: $medium-bp){
+        transform: rotate(200deg) translate(-90% , -150%);
+      }
+    }
+  }
+  &__button {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    border-radius: .4rem;
+    margin: 0 auto;
+    padding: 1rem;
+    transition: all .2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(#B79FFF , 0.5);
+    }
+  }
+  &__img {
+    margin-left: 1rem;
+  }
+}

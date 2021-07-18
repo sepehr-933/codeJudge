@@ -1,0 +1,23 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: IRANSans;
+    font-weight: normal;
+    src: url("./fonts/irsans.woff");
+}
+@font-face {
+    font-family: IRANSans;
+    font-weight: bold;
+    src: url("./fonts/irsansb.woff");
+}
+
+body {
+    color: #5A5A5A;
+    line-height: 1.4;
+    font-family: IRANSans , Arial;
+}
